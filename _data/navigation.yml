@@ -1,12 +1,103 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  #- title: "Quick-Start Guide"
+    #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    
+  - title: "About"
+    url: /about/
+  - title: "Category"
+    url: /categories/
+
+
+  #- title: "Tags"
+  #  url: /tags/
+  #- title: "Posts"
+  #  url: /posts/
+ 
+  # title: "Pages"
+  # url: /page-archive/
+
+  #- title: "Collections"
+  #  url: /collection-archive/
+  
+  #- title: "Search"
+  #  url: /search/
+
+  #- description
+  #- title: "Profile"
+  #  url: /profile/
+
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+# docs:
+#   - title: Getting Started
+#     children:
+
+#       - title: "Structure"
+#         url: /docs/structure/
+#       - title: "Installation"
+#         url: /docs/installation/
+#       - title: "Upgrading"
+#         url: /docs/upgrading/
+
+#   - title: Customization
+#     children:
+#       - title: "Configuration"
+#         url: /docs/configuration/
+#       - title: "Navigation"
+#         url: /docs/navigation/
+#       - title: "UI Text"
+#         url: /docs/ui-text/
+#       - title: "Authors"
+#         url: /docs/authors/
+#       - title: "Layouts"
+#         url: /docs/layouts/
+
+
+# defaults:
+#   # _docs
+#   - scope:
+#       path: ""
+#       type: docs
+#     values:
+#       sidebar:
+#         nav: "docs"
+
+
+
+
+
+sidebar-sample:
+  - title: "Dev"
+    children:
+      - title: "Ai"
+        url: /categories/#Ai
+      - title: "ComputerVision"
+        url: /categories/#ComputerVision
+      - title: "Android"
+        url: https://yimsuson.github.io/categories/
+      - title: "ComputerScience"
+        url: https://yimsuson.github.io/categories/
+      - title: "Paper"
+        url: "https://yimsuson.github.io/categories/"
+      - title: "Portfolio"
+        url: https://yimsuson.github.io/categories/
+
+  - title: "Daily"
+    children:
+      - title: "Brush House"
+        url: /
+      - title: "Food"
+        url: /
+      - title: "Information"
+        url: /
+      - title: "Grammar"
+        url: https://yimsuson.github.io/categories/
+ 
+
+
