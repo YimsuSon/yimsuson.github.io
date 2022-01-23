@@ -74,9 +74,9 @@ layout: single
 ## Education 
 
 <br/>
-- 계명대학교 건축공학 (Math,Science,Computer 공학인증과정)<br/>
+- 계명대학교 건축공학 (Math,Science,Computer 공학인증과정)(08.03 ~ 15.02) <br/>
 <br/>
-- 세종대학교 컴퓨터공학과 석사(20.01 ~ 22.02)<br/>
+- 세종대학교 컴퓨터공학과 석사(20.03 ~ 22.02)<br/>
 <br/>
 
 
