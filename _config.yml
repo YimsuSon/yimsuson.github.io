@@ -10,29 +10,45 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Go_To_NewPostPage"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+name                     : "Yimsu"
+description              : "Yimsu website."
+
+# markdown의 본문에 본인 블로그의 링크를 기재할 경우 
+# https://devinlife.com 과 같이 직접 경로를 지정하지 말고, 
+# {{ site.url }}를 기반으로 표현하자. 이렇게 하는 이유는 커스텀 도메인을 등록하거나
+# 도메인을 변경할 일이 발생하면 markdown의 기재해둔 링크 주소가 _config.yml 파일의 수정으로 모두 변경된다.
+# <{{ site.url }}{{ site.baseurl }}/blog/start-blog/>
+
+url                      : "https://yimsuson.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : #"/categories/" # the subpath of your site, e.g. "/blog"
+repository               : "yimsuson/yimsuson.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+
+
+# 예로, markdown에서 bio-photo-keyboard.jpg 파일을 보여주고 싶다면, 
+# 아래와같이 링크를 기재하면 그림이 표시된다.
+# ![]({{ site.url }}{{ site.baseurl }}/assets/images/bio-photo-keyboard.jpg    )
+
+teaser                   : "/assets/images/500x300.png" # 게시글아래에 사진 ex) "/assets/images/profilephoto.jpeg" 
+logo                     : ## 최상단 메뉴 바에 사이트 로고 넣기  path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+words_per_minute         : 200 #read time을 계산하기 위한 분당 읽는 글자수 입니다
+
+
+
+comments: # 댓글 설정에 대한부분입니다. 기본적으로 false 로 되어있습니다.
+  provider               : "disqus" # false (default),  "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus: #개인적으로 disqus 댓글 모듈을 사용하였습니다.
+    shortname            : "yimsuson" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -43,13 +59,6 @@ comments:
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
-  giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
@@ -58,24 +67,28 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+
+#사이트내 검색 설정에 대한 부분입니다.
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+
+# 저의 경우 algolia 를 사용하고 있으며 추가설정이 필요합니다.
+search_provider          : algolia # lunr (default), algolia, google
 algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
+  application_id         : "VJ1HUFHMZZ"
+  index_name             : "blog"
+  search_only_api_key    : "4bfc52799bb8d168cb76ec66a6c85d34"
+  powered_by             : true # true (default), false
 google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
+  search_engine_id       : lab10922@gmail.com # YOUR_SEARCH_ENGINE_ID
+  instant_search         : true # false (default), true
+
+# SEO Related 웹마스터 도구 사용을 도와주는 부분입니다.
 # SEO Related
 google_site_verification :
 bing_site_verification   :
-naver_site_verification  :
 yandex_site_verification :
-baidu_site_verification  :
+naver_site_verification  :
 
 # Social Sharing
 twitter:
@@ -92,25 +105,30 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
+
+
+#구글 애널리틱스에 대한 설정입니다.
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-176082293-1"
     anonymize_ip         : # true, false (default)
 
 
+
+# 사이트 소유자에 대한 정보를 작성합니다.
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "Yimsu Blog"
+  avatar           : "/assets/images/profilephoto.jpeg" # 동그란원 안에사진
+  bio              : "What needs to be overcome is laziness and resignation."
+  location         : "republic Korea"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -122,7 +140,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/yimsuson"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -215,12 +233,19 @@ sass:
 
 
 # Outputting
+#paginate는 첫페이지에서 보여주는 recent posts의 개수이다.
+#이 개수를 넘어서는 오래된 게시물들은 다름 페이지 번호로 넘어간다.
+#timezone은 한국이면 Seoul을 사용한다.
+
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+paginate_path: #/page:num/
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
+
+
+# 플러그인을 정의하는 부분입니다.
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
@@ -228,6 +253,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-algolia
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -248,6 +274,10 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
+
+# 포스트 글의 하단부분에 카테고리, 태그 링크들이있다
+#_config.yml 파일에 보면 이에 대한 설정이 있다. category_archive, tag_archive 설정 부분을
+# 주석 처리하면 블로그에서 더 이상 카테고리와 태그 목록을 표시하지 않는다.
 category_archive:
   type: liquid
   path: /categories/
@@ -275,6 +305,10 @@ compress_html:
     envs: development
 
 
+
+# Front Matter 설정입니다.
+# 페이지 본문에 적용되는 기본 설정들을 정의합니다.
+# path 값으로 경로를 설정해 줍니다.
 # Defaults
 defaults:
   # _posts
@@ -285,6 +319,34 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+
+  # 테마에 포함되어 있던 Docs 폴더의 _config.yml을 참고하여 _pages 폴더를 만들고 그 폴더에 대한 출력 방법을 정의 했습니다.
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+
+
+# Travis-ci 를 사용하기 위해 추가한 부분입니다.
+# Jasper2 테마의 Travis-ci 설정부분을 사용합니다. 
+#
+#build option
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+
+
