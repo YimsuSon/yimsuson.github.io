@@ -34,9 +34,9 @@ toc_label: "Yimsu's Blog"
 toc_icon: "cog"
 
 categories:
-  - Portfolio
+  # - Portfolio
 ---
-
+<!-- 
 A4를 기준으로 해서 패드의 사이즈를 측정
 
 
@@ -60,4 +60,4 @@ A4를 기준으로 해서 패드의 사이즈를 측정
 
 ![image](/assets/images/sizeEstimation3.png)
 
-<br/>
+<br/> -->
